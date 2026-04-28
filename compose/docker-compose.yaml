@@ -1,0 +1,30 @@
+version: '3.9'
+
+services:
+ web:
+  build: .
+  ports: 
+   - "3000:3000"
+  depends_on:
+   - db
+  volumes:
+   - ./app:/app
+  networks:
+   - net1
+ 
+ db:
+  image: mysql:8
+  environment:
+   MYSQL_ROOT_PASSWORD: root
+   MYSQL_DATABASE: db1
+
+  volumes:
+   - db-data:/var/lib/mysql
+  networks:
+   - net1
+
+volumes:
+ db-data:
+networks:
+ net1: 
+  driver: bridge
