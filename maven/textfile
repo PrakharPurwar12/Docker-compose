@@ -1,0 +1,3 @@
+only spotify plugin depends on docker file
+
+mvn compile jib:dockerBuild
