@@ -24,7 +24,7 @@
         <configuration>
           <archive>
             <manifest>
-              <mainClass>com.example.jibplug.App</mainClass>
+              <mainClass>com.example.App</mainClass>
             </manifest>
           </archive>
         </configuration>
@@ -32,7 +32,7 @@
       <plugin>
         <groupId>com.google.cloud.tools</groupId>
         <artifactId>jib-maven-plugin</artifactId>
-        <version>3.4.4</version>
+        <version>3.3.2</version>
         <configuration>
           <from>
             <image>eclipse-temurin:21</image>
